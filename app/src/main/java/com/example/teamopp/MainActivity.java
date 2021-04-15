@@ -1,6 +1,8 @@
 package com.example.teamopp;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
 import android.annotation.TargetApi;
@@ -12,24 +14,24 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 
 public class MainActivity extends AppCompatActivity {
+RecyclerView recyclerView;
+    String s1[], s2[];
+    int images[] = {R.drawable.emmy, R.drawable.jin, R.drawable.kate, R.drawable.kim, R.drawable.lilly, R.drawable.sam};
+
+
     @TargetApi(Build.VERSION_CODES.O)
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+@Override
+protected void onCreate(Bundle savedInstanceState) {
+    super.onCreate(savedInstanceState);
+    setContentView(R.layout.activity_main);
 
-            TextView textView=findViewById(R.id.date);
-            SimpleDateFormat sdf = new SimpleDateFormat("EEEE");
-            String currentDateandTime = sdf.format(new Date());
-            textView.setText(currentDateandTime);
+    recyclerView = findViewById(R.id.recyclerView);
 
-        TextView date2=findViewById(R.id.date2);
-        SimpleDateFormat sdf2 = new SimpleDateFormat(" MMM d yyyy HH:mm");
+    s1 = getResources().getStringArray(R.array.name);
+    s2 = getResources().getStringArray(R.array.description);
 
-        String currentDateandTime2 = sdf2.format(new Date());
-
-        date2.setText(currentDateandTime2);
-
-
+    MyAdapter myAdapter = new MyAdapter(this,s1, s2, images);
+    recyclerView.setAdapter(myAdapter);
+    recyclerView.setLayoutManager(new LinearLayoutManager(this));
         }
     }

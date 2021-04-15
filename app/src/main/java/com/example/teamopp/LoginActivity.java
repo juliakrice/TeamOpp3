@@ -30,6 +30,8 @@ public class LoginActivity extends AppCompatActivity {
 
 
 
+// she is doing login
+// he ih doing the layouts for all the pages
 
 
 

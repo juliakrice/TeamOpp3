@@ -1,42 +1,71 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_margin="16dp"
+    android:background="@android:color/black"
     android:orientation="vertical"
     tools:context=".LoginActivity">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="59dp"
+        android:layout_weight="200"
+        android:background="@color/black"
+        android:baselineAligned="false"
+        android:text="TeamOpp"
+        android:textAlignment="center"
+        android:textColor="@color/white" />
 
     <EditText
         android:id="@+id/etUsername"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_weight="1"
+        android:background="@color/white"
+        android:backgroundTint="@color/white"
         android:ems="10"
-        android:hint="Username" />
+        android:hint="Username"
+        android:textColor="@color/black" />
 
     <EditText
         android:id="@+id/etPassword"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_weight="1"
+        android:background="@color/black"
+        android:backgroundTint="@android:color/white"
         android:ems="10"
         android:hint="Password"
-        android:inputType="textPassword" />
+        android:inputType="textPassword"
+        android:textColor="@color/black" />
 
     <Button
         android:id="@+id/btnLogin"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_weight="1"
+        android:backgroundTint="@android:color/holo_red_dark"
         android:text="Login" />
+
+    <Button
+        android:id="@+id/btnRegister"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="200"
+        android:backgroundTint="@android:color/holo_red_dark"
+        android:text="Register" />
 
     <ProgressBar
         android:id="@+id/pbLoading"
         style="?android:attr/progressBarStyle"
-        android:visibility="invisible"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_weight="1" />
+        android:layout_weight="1"
+        android:visibility="invisible" />
+
 </LinearLayout>

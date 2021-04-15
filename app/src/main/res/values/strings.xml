@@ -1,3 +1,22 @@
 <resources>
     <string name="app_name">TeamOpp</string>
+    <string-array name="name">
+        <item>Mary James</item>
+        <item>Jessica Richard </item>
+        <item>Ashley Harvey</item>
+        <item>Ellie Hamm</item>
+        <item>Kassidy Taylor</item>
+        <item>Harbor Zink</item>
+        <item>Madi Rush</item>
+    </string-array>
+
+    <string-array name="description">
+        <item>Description</item>
+        <item>Description</item>
+        <item>Description</item>
+        <item>Description</item>
+        <item>Description</item>
+        <item>Description</item>
+    </string-array>
+
 </resources>
